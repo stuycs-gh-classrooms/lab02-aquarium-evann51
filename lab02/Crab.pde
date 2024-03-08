@@ -26,6 +26,23 @@ class Crab extends Animal{
     y+=yspeed;
   }//move
   
+  
+  void eat(){
+    for(int l = 0;l<t.animals.size();l++){
+      Animal a = t.animals.get(l);
+      if(dist(x,y,a.x,a.y)<50){
+        a.health -=10;
+         health+=15;
+         if(health>100){
+           size+=2;
+           health -= 10;
+         }
+         if(size>200){
+           health -=60;
+         }
+      }
+    }
+  }
   void display(){
     image(crab,x,y,size,size);
   }//display

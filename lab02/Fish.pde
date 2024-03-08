@@ -8,7 +8,17 @@ class Fish extends Animal{
   void display(){
     image(fish1,x,y,size,size);
   }//display
-  
+  void eat(){
+    for(int i = 0;i<foods.size();i++){
+      Food f = foods.get(i);
+      if(dist(x,y,f.x,f.y)<=f.size){
+        f.size-=1;
+        if(f.size<5){
+          foods.remove(f);
+        }
+      }
+    }
+  }
   void move(){
     if(x<0){
       x = 0;

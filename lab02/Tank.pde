@@ -29,6 +29,23 @@ class Tank{
     }
   }//move
   
+  void testD(){
+    for(int i = 0;i<animals.size();i++){
+      Animal a = animals.get(i);
+      a.health-=10;
+      if(a.health<=0){
+        animals.remove(a);
+      }
+    }
+  }//move
+  
+  void eat(){
+    for(int i = 0;i<animals.size();i++){
+      Animal a = animals.get(i);
+      a.eat();
+    }
+  }//move
+  
   void addAnimal(int id){
     if(id == 1){
       animals.add(new Crab(mouseX, mouseY));

@@ -4,6 +4,7 @@ class Animal{
   int xspeed;
   int yspeed;
   int size;
+  int health;
   
   Animal(int ax, int ay){
     x = ax;
@@ -11,6 +12,7 @@ class Animal{
     xspeed = 5;
     yspeed = 2;
     size = int(random(50,100));
+    health = 100;
   }//constructor
   
   void display(){
@@ -21,4 +23,7 @@ class Animal{
   
   void moveDestination(int mx, int my){   
   }//moveDestination
+  
+  void eat(){
+  }
 }

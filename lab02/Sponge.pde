@@ -2,7 +2,7 @@ class Sponge extends Animal{
   Sponge(int ax, int ay){
     super(ax, ay);
     xspeed = int(random(1,6))*int(pow(-1, int(random(1,3))));
-    yspeed = 2;
+    yspeed = 1;
   }//contructor
   
   void move(){

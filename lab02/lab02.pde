@@ -9,6 +9,8 @@ PImage sand;
 PImage water;
 PImage lid;
 
+ArrayList<Food> foods = new ArrayList<Food>();
+  
 //animal
 PImage fish1;
 PImage crab;
@@ -38,9 +40,19 @@ void setup(){
 void draw(){
   t.display();
   t.move();
+  t.eat();
+  for(int i = 0;i<foods.size();i++){
+    foods.get(i).display();
+  }
+  if(frameCount%50==0){
+  
+  t.testD();
+  }
 }//draw
 
-
+void mouseClicked(){
+  foods.add(new Food());
+}
 void keyPressed(){
   if(key == '1'){
     t.addAnimal(1);
